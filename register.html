@@ -1,74 +1,178 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register - Grove Pickleball</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&family=Oswald:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #E4D5B4;
-      color: #636B2F;
       margin: 0;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      color: #674F2D; 
-      font-family: 'Raleway', sans-serif;
-      font-size: 60px;
-    }
-    section {
-      margin-bottom: 2rem;
-      background-color: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    a.button {
-      display: inline-block;
-      background-color: #89CFF0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #E4D5B4;
       color: #674F2D;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 0.5rem;
-      transition: all 0.3s ease;
     }
-    a.button:hover {
+
+    header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
+      background-color: #071c07;
+      color: white;
+    }
+
+    .logo-container img {
+      width: 220px;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .nav-button a {
+      display: inline-block;
+      background-color: #071c07;
+      color: white;
+      padding: 1rem 2rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-transform: uppercase;
+    }
+
+    .nav-button a:hover {
       background-color: #674F2D;
       color: #E4D5B4;
+      transform: scale(1.05);
     }
-    .nav-button {
-      display: block;
+
+    .hero {
+      background: url('register-hero-image.jpg') no-repeat center center/cover;
+      padding: 6rem 5%;
       text-align: center;
-      margin-bottom: 2rem;
+      color: white;
+    }
+
+    .hero h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #071c07;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+      background-color: #674F2D;
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 3rem 5%;
+      background-color: #F3EEE3;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #071c07;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 1rem 1rem 0 0;
+      background-color: #071c07;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: #674F2D;
+      color: #E4D5B4;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #071c07;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .links a {
+        display: block;
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Register for Grove Pickleball</h1>
-  <div class="nav-button">
-    <a class="button" href="index.html">Back to Home</a>
-  </div>
 
-  <section>
-    <h2>Sign Up</h2>
-    <p>Please use our official Google Form to sign up:</p>
-    <a class="button" href="https://forms.gle/your-signup-form-link" target="_blank">Sign Up Here</a>
+  <header>
+    <div class="logo-container">
+      <img src="grove-pickleball-high-resolution-logo-transparent.png" alt="Grove Pickleball Logo">
+    </div>
+    <h1>Register for Grove Pickleball</h1>
+    <div class="nav-button">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Secure Your Spot!</h2>
+    <p>Ready to join Grove Pickleball? Complete the registration below and be part of an active, supportive community of players.</p>
+    <a href="https://forms.gle/your-signup-form-link" class="cta-button" target="_blank">Register Now</a>
   </section>
 
-  <section>
+  <section id="payment">
     <h2>Payment Methods</h2>
     <p>We accept Venmo, PayPal, and cash payments at events. More details will be shared after registration.</p>
   </section>
 
-  <section>
-    <h2>Applications</h2>
-    <p>Interested in volunteering, coaching, or organizing? Submit your application below:</p>
-    <a class="button" href="https://forms.gle/your-application-form-link" target="_blank">Submit Application</a>
+  <section class="links">
+    <h2>Other Opportunities</h2>
+    <p>Want to volunteer, coach, or organize events? Submit your application below:</p>
+    <a href="https://forms.gle/your-application-form-link" target="_blank">Apply Here</a>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Grove Pickleball | Designed for Players, by Players.</p>
+  </footer>
+
 </body>
 </html>
+
