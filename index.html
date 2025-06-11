@@ -15,58 +15,88 @@
 
     header {
       position: relative;
-      text-align: center;
-      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 5%;
       background-color: #13341E;
       color: white;
     }
 
-    .logo-container {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    .logo {
-      max-width: 200px;
+    .logo-container img {
+      width: 220px; /* Larger logo */
     }
 
     header h1 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 4rem;
-      margin-bottom: 1rem;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
 
-    .nav-button {
-      margin: 1rem 0;
-    }
-
-    a.button {
+    .nav-button a {
       display: inline-block;
-      background-color: #13341E;
+      background-color: #89CFF0;
       color: white;
-      padding: 0.75rem 1.5rem;
+      padding: 1rem 2rem;
       font-family: 'Oswald', sans-serif;
       font-size: 1.2rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-transform: uppercase;
     }
 
-    a.button:hover {
+    .nav-button a:hover {
       background-color: #674F2D;
       color: #E4D5B4;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      padding: 6rem 5%;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #13341E;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+      background-color: #674F2D;
+      transform: scale(1.05);
     }
 
     section {
-      padding: 2rem;
+      padding: 3rem 5%;
       background-color: white;
-      margin: 1rem;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
     h2 {
@@ -75,10 +105,21 @@
       color: #13341E;
     }
 
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
     .photos img {
-      width: 45%;
-      margin: 1rem 2%;
-      border-radius: 10px;
+      width: 40%;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .links a {
@@ -86,40 +127,40 @@
       margin: 1rem 1rem 0 0;
       background-color: #13341E;
       color: white;
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1.5rem;
       font-family: 'Oswald', sans-serif;
       font-size: 1rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       transition: all 0.3s ease;
     }
 
     .links a:hover {
       background-color: #674F2D;
       color: #E4D5B4;
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem;
       background-color: #13341E;
       color: white;
       font-family: 'Poppins', sans-serif;
     }
 
     @media (max-width: 768px) {
+      .photos {
+        flex-direction: column;
+      }
+
       .photos img {
         width: 100%;
-        margin: 1rem 0;
       }
 
       .links a {
         display: block;
         margin-bottom: 1rem;
-      }
-
-      body {
-        padding: 1rem;
       }
     }
   </style>
@@ -128,17 +169,23 @@
 
   <header>
     <div class="logo-container">
-      <img src="grove-pickleball-high-resolution-logo-transparent.png" alt="Grove Pickleball Logo" class="logo">
+      <img src="grove-pickleball-high-resolution-logo-transparent.png" alt="Grove Pickleball Logo">
     </div>
     <h1>Grove Pickleball</h1>
     <div class="nav-button">
-      <a class="button" href="register.html">Register Now</a>
+      <a href="register.html">Register Now</a>
     </div>
   </header>
 
+  <section class="hero">
+    <h2>Join the Ultimate Pickleball Community</h2>
+    <p>We are Grove Pickleball, a new pickleball community based in Dallas, TX. We welcome players of all levels and engage in meaningful environmental awareness efforts. Let’s rally together!</p>
+    <a href="register.html" class="cta-button">Sign Up Today</a>
+  </section>
+
   <section id="about">
     <h2>About Us</h2>
-    <p>We are Grove Pickleball, a new pickleball community based in Dallas, TX, with efforts to expand throughout the Texas Triangle. Our mission is to promote the sport of pickleball to players of all levels and to bring sensible awareness to environmental issues with donations and charity work. We hope you will consider joining our community!</p>
+    <p>We bring pickleball lovers together while advocating for environmental sustainability. Our mission: play, connect, and make a difference.</p>
   </section>
 
   <section class="photos">
@@ -147,7 +194,7 @@
   </section>
 
   <section class="links">
-    <a href="https://www.instagram.com/grove.pickleball/?utm_source=ig_web_button_share_sheet" target="_blank">Follow us on Instagram</a>
+    <a href="https://www.instagram.com/grove.pickleball" target="_blank">Follow us on Instagram</a>
     <a href="https://groupme.com/join_group/106040208/6mzSekK8" target="_blank">Join our GroupMe</a>
   </section>
 
@@ -158,7 +205,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Grove Pickleball</p>
+    <p>&copy; 2025 Grove Pickleball | Designed for Players, by Players.</p>
   </footer>
 
 </body>
